@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -35,7 +36,7 @@ export default function Register() {
         navigate("/login"); // Redirect to login page after successful registration
       })
       .catch((error) => {
-        alert(error.message);
+        alert(error.message || "Terjadi kesalahan saat mendaftar.");
       })
       .finally(() => {
         setIsLoading(false);
@@ -77,7 +78,7 @@ export default function Register() {
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
-          <button type="submit" disabled={isLoading} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+          <button type="submit" disabled={isLoading} className="bg-gray-500 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
             {isLoading ? "Loading..." : "Register"}
           </button>
         </form>

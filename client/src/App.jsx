@@ -12,9 +12,9 @@ export default function App() {
       <div>
         <Header />
         <Outlet />
-        <footer className="border-t border-gray-300 p-2 text-center">
+        {/* <footer className="border-t font-bold text-xl text-white bg-gray-700 border-gray-800 p-2 text-center">
           &copy; AlmiaChan
-        </footer>
+        </footer> */}
       </div>
     </AuthContext.Provider>
   );
